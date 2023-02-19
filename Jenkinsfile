@@ -9,7 +9,7 @@ node {
 
     stage('Build image') {
 
-        sh " hello world "
+        bat "hello world "
 
     }
 
