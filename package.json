@@ -1,5 +1,9 @@
 {
     "name": "dev-ops-use-case",
     "version": "1.0.0",
-    "author": "nidhalmesselmani@yahoo.fr"
-  }
+    "author": "nidhalmesselmani@yahoo.fr",
+    "scripts": {
+      "test": "node test.js",
+      "start": "node main.js"
+    }
+}
