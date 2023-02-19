@@ -14,7 +14,7 @@ node {
     }
 
     stage('Run image'){
-        bat "docker run -it --rm nidhalmesselmani47/devopsusecase exit"
+        bat "docker run -it --rm nidhalmesselmani47/devopsusecase"
     }
 
 
