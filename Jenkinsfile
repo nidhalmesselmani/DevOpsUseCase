@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-       sh 'docker build -t nidhalmesselmani47/devopsusecase:latest .'
+       sh 'building'
     }
 
     stage('Test image') {
