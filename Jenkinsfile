@@ -17,6 +17,7 @@ node {
         bat """
         docker run -d --name test nidhalmesselmani47/devopsusecase
         docker rm -f test
+        echo "testing is done"
         """
     }
 
