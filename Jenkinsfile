@@ -13,6 +13,12 @@ node {
 
     }
 
+    stage('Run image'){
+        bat "docker run nidhalmesselmani47/devopsusecase"
+    }
+
+    
+
 
 
 
