@@ -9,7 +9,7 @@ node {
 
     stage('Build image') {
 
-        bat "echo hello world "
+        bat "docker build  -t \"nidhalmesselmani47/devopsusecase\" . "
 
     }
 
