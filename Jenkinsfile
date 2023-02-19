@@ -9,6 +9,8 @@ node {
 
     stage('Build image') {
 
+        sh " hello world "
+
     }
 
 
