@@ -9,16 +9,23 @@ node {
 
     stage('Build image') {
 
-        bat "docker build  -t \"nidhalmesselmani47/devopsusecase\" . "
+        dockerImage = docker.build("nidhalmesselmani47/devopsusecase:latest")
+
 
     }
 
-    stage('Run image'){
-        bat "docker run -d --name test nidhalmesselmani47/devopsusecase"
+    stage('Test image'){
+        bat """
+        docker run -d --name test nidhalmesselmani47/devopsusecase
+        docker rm -f test
+        """
     }
 
-    stage('Delete Container'){
-        bat "docker rm -f test"
+    stage('Push image') {
+
+        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+         dockerImage.push()
+        }
     }
 
 
