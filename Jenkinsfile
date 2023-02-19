@@ -14,8 +14,14 @@ node {
     }
 
     stage('Run image'){
-        bat "docker run -it --rm nidhalmesselmani47/devopsusecase"
+        bat "docker run -d --name test nidhalmesselmani47/devopsusecase"
     }
+
+    stage('Delete Container'){
+        bat "docker rm -f test"
+    }
+
+
 
 
 
